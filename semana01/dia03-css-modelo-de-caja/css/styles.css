@@ -30,6 +30,10 @@ font-family: 'Raleway', sans-serif
 }
 
 /* GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 html {
     font-size: var(--font-size);
 }
@@ -39,9 +43,25 @@ body {
     color: var(--neutral-white);
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* UTILS */
 .wrapper {
-    width: min(100%, 1440px);
+    /* 1rem = tamaño de la letra principal (14px) */
+    /* 1em = tamaño de la letra de su contenedor más próximo (14px) */
+    width: min(100% - 3rem, 1440px);
+}
+
+.hidden {
+    display: none;
 }
 
 /* HEADER */
@@ -51,4 +71,80 @@ body {
     justify-content: space-between;
     margin: 0 auto;
     margin-top: 4rem;
+}
+
+.header__nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* HERO */ 
+.hero { 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.hero__title {
+    width: min(100% - 3rem, 720px);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+.hero__text {
+    width: min(100% - 3rem, 720px);
+    font-family: var(--font-secondary);
+    padding: 0 7rem;
+    line-height: 1.5;
+}
+
+.hero__button {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-bold);
+    border: 0;
+    border-radius: 7rem;
+    padding: 1rem 1.5rem;
+    min-width: 220px;
+    color: var(--neutral-white);
+    background: linear-gradient(
+        90deg,
+        var(--accent-cyan-gradient) 0%,
+        var(--accent-blue-gradient) 35%
+    );
+    cursor: pointer;
+}
+
+.hero__button:hover {
+    background: var(--accent-cyan-gradient);
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: 340px 340px;
+    justify-content: center;
+    gap: 5rem;
+    background-color: var(--primary-dark-blue-main);
+}
+
+.feature {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature__title {
+    font-family: var(--font-primary);
+}
+
+.feature__text {
+    font-family: var(--font-secondary);
 }
