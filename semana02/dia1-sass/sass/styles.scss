@@ -11,9 +11,24 @@ $card-bg: #fff;
 $card-border-color: #454545;
 $card-border-radius: 8px;
 
+/* MIXING */
+@mixin my-default-border {
+    border: 5px solid orangered;
+}
+
+@mixin custom-border($width, $color, $is-solid: true) {
+    @if $is-solid {
+        // se ejecuta si is-solid es true (verdadero)
+        border: $width solid $color;
+    } @else {
+        // se ejecuta si is-solid es false (falso)
+        border: $width dashed $color;
+    }
+}
+
+/* GENERAL */
+
 body {
-    background-color: $primary-color;
-    background-color: var(--mi-variable);
 }
 
 /* CARD */
@@ -23,6 +38,9 @@ body {
     border: 1px solid $card-border-color;
     border-radius: $card-border-radius;
     margin-bottom: 1rem;
+    @include my-default-border;
+    @include custom-border(4px, pink );
+    @include custom-border(4px, pink , false);
 
     /* NESTED PROPS */
     &__header {

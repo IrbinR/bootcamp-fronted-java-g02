@@ -5,17 +5,17 @@
 }
 
 /* VARIABLES */
-body {
-  background-color: #AADDEE;
-  background-color: var(--mi-variable);
-}
-
+/* MIXING */
+/* GENERAL */
 /* CARD */
 .card {
   background-color: #fff;
   border: 1px solid #454545;
   border-radius: 8px;
   margin-bottom: 1rem;
+  border: 5px solid orangered;
+  border: 4px solid pink;
+  border: 4px dashed pink;
   /* NESTED PROPS */
 }
 .card__header {
