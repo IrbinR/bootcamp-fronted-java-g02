@@ -7,6 +7,11 @@
 /* VARIABLES */
 /* MIXING */
 /* GENERAL */
+body {
+  background-color: #AADDEE;
+  background-color: var(--mi-variable);
+}
+
 /* CARD */
 .card {
   background-color: #fff;

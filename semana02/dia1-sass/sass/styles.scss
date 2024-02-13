@@ -29,6 +29,8 @@ $card-border-radius: 8px;
 /* GENERAL */
 
 body {
+    background-color: $primary-color;
+    background-color: var(--mi-variable);
 }
 
 /* CARD */
