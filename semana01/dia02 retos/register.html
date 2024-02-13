@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reto: Formulario de registro</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <!--<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />-->
+    <style>
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
-    <!-- TODO: Crear un formulario para crear un acuenta de usuario con los campos nombres, apellidos, email, telefono, password, confirmar password(caja de texto), si gustan pueden agregar más campos. Y un botón llamado registrarse. Opcionalmente pueden usar el framework PICO que vimos en clase. -->
+    <!-- TODO: Crear un formulario para crear un acuenta de usuario con los campos 
+      nombres, apellidos, email, telefono, password, confirmar password(caja de texto), 
+      si gustan pueden agregar más campos. Y un botón llamado registrarse. Opcionalmente 
+      pueden usar el framework PICO que vimos en clase. -->
+    <main class="container">
+      <form>
+        <img src="https://placehold.co/80.png?text={vv}" />
+        <hgroup>
+          <h1>Crear una cuenta</h1>
+          <h2>Ingresa la siguiente información para registrarte.</h2>
+        </hgroup>
+        <label for="name">Nombres</label>
+        <input type="text" id="name" placeholder="Ingrese sus nombres">
+        <label for="lastName">Apellidos</label>
+        <input type="text" id="lastName" placeholder="Ingrese sus apellidos">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email: Ej. user@gmail.com">
+        <label for="phone">Teléfono</label>
+        <input type="tel" id="phone" placeholder="Ingrese su teléfono">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Ingrese su password">
+        <label for="confirmation">Confirmacion de password</label>
+        <input type="password" id="confirmation" placeholder="Vuelva a ingresar su password">
+        <input type="submit" value="Registrarse">
+        <p>¿Ya tienes una cuenta? <a href="#">Accede desde aquí</a></p>
+      </form>
+    </main>
   </body>
 </html>

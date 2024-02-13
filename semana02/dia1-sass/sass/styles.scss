@@ -1,0 +1,40 @@
+// comentario de una linea
+/* comentario de múltiples lineas */
+:root {
+    --mi-variable: rgb(186, 201, 57);
+}
+
+/* VARIABLES */
+$primary-color: #AADDEE;
+
+$card-bg: #fff;
+$card-border-color: #454545;
+$card-border-radius: 8px;
+
+body {
+    background-color: $primary-color;
+    background-color: var(--mi-variable);
+}
+
+/* CARD */
+
+.card {
+    background-color: $card-bg;
+    border: 1px solid $card-border-color;
+    border-radius: $card-border-radius;
+    margin-bottom: 1rem;
+
+    /* NESTED PROPS */
+    &__header {
+        padding: 1rem 1.5rem;
+    }
+
+    &__body {
+        padding: 1rem 1.5rem;
+    }
+
+    &--success {
+        background-color: green;
+    }
+}
+
